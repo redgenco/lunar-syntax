@@ -1,6 +1,6 @@
 # lunar-syntax theme
 
-An Atom syntax theme inspired by the lunar surface.
+An Atom syntax theme inspired by lunar exploration.
 
 ![Lunar Title] (http://i.imgur.com/ofB5lDt.png)
 
