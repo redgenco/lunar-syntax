@@ -1,0 +1,15 @@
+{
+  "name": "lunar-syntax",
+  "theme": "syntax",
+  "version": "0.0.0",
+  "description": "An Atom syntax theme inspired by the lunar surface.",
+  "keywords": [
+    "syntax",
+    "theme"
+  ],
+  "repository": "https://github.com/redgenco/lunar-syntax",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
