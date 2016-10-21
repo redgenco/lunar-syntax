@@ -15,3 +15,9 @@ An Atom syntax theme inspired by lunar exploration.
 ### CS
 ![CS Preview](http://i.imgur.com/MZjZuz2.png)
 ---
+
+[Lunar Syntax] (https://atom.io/themes/lunar-syntax)
+[Module Syntax] (https://atom.io/themes/module-syntax)
+[Orbit Syntax] (https://atom.io/themes/orbit-syntax)
+
+---
