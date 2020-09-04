@@ -1,6 +1,6 @@
 @import "syntax-variables";
 
-atom-text-editor, :host {
+atom-text-editor {
   background-color: @syntax-background-color;
   color: @syntax-text-color;
 
@@ -51,272 +51,263 @@ atom-text-editor, :host {
   }
 }
 
-atom-text-editor .search-results .marker .region,
-:host .search-results .marker .region {
+atom-text-editor .search-results .syntax--marker .region {
   // background-color: transparent;
   border: 1px solid @syntax-result-marker-color;
 }
 
-atom-text-editor .search-results .marker.current-result .region,
-:host .search-results .marker.current-result .region {
+atom-text-editor .search-results .syntax--marker.current-result .region {
   border: 1px solid @syntax-result-marker-color-selected;
 }
 
-.comment {
+.syntax--comment {
   color: @color-three;
-  // background-color: rgba(0, 0, 0, 0.1);
 }
 
-.keyword {
+.syntax--keyword {
   color: @syntax-text-color; // C# "using System.Collections;"
 
-  &.control {
+  &.syntax--control {
     color: @syntax-text-color-dark;
   }
 
-  &.operator {
+  &.syntax--operator {
     color: @syntax-text-color; // Signs like "=" and ":"
   }
 
-  &.other.special-method {
+  &.syntax--other.syntax--special-method {
     color: @blue;
   }
 
-  &.other.unit { // CSS "px"
+  &.syntax--other.syntax--unit { // CSS "px"
     color: @color-nine;
   }
 }
 
-.storage {
+.syntax--storage {
   color: @syntax-text-color-dark; // C# class declaration type (void, public etc)
 }
 
-.constant {
+.syntax--constant {
   color: @color-nine; // C# bools, CSS options - "block" etc.
-  // background-color: rgba(0, 0, 0, 0.8);
 
 
-  &.character.escape {
+  &.syntax--character.syntax--escape {
     color: @syntax-text-color-dark;
   }
 
-  &.numeric {
+  &.syntax--numeric {
     color: @color-nine; // C# Ints etc
-    // background-color: rgba(0, 0, 0, 0.2);
   }
 
-  &.other.color {
+  &.syntax--other.syntax--color {
     color: @syntax-text-color-dark;
   }
 
-  &.other.symbol {
+  &.syntax--other.syntax--symbol {
     color: @syntax-text-color-dark; //?
   }
 }
 
-.variable {
+.syntax--variable {
   color: @color-eight;
 
-  &.interpolation {
+  &.syntax--interpolation {
     color: darken(@color-eight, 10%);
   }
 
-  &.parameter.function {
+  &.syntax--parameter.syntax--function {
     color: @color-eight;
   }
 }
 
-.invalid.illegal {
+.syntax--invalid.syntax--illegal {
   background-color: @color-five;
   color: @white;
 }
 
-.string {
+.syntax--string {
   color: @color-four; // String
 
 
-  &.regexp {
+  &.syntax--regexp {
     color: @syntax-text-color-dark;
 
-    .source.ruby.embedded {
+    .syntax--source.syntax--ruby.syntax--embedded {
       color: @orange;
     }
   }
 
-  &.other.link {
+  &.syntax--other.syntax--link {
     color: @syntax-text-color-dark;
   }
 }
 
-.punctuation {
-  &.definition {
-    &.comment {
+.syntax--punctuation {
+  &.syntax--definition {
+    &.syntax--comment {
       color: @color-three; // CSS Comment syntax
     }
 
-    &.string,
-    &.variable,
-    &.parameters,
-    &.array {
+    &.syntax--string,
+    &.syntax--variable,
+    &.syntax--parameters,
+    &.syntax--array {
       color: @color-two;
     }
 
-    &.heading,
-    &.identity {
+    &.syntax--heading,
+    &.syntax--identity {
       color: @blue;
     }
 
-    &.bold {
+    &.syntax--bold {
       color: @yellow;
       font-weight: bold;
     }
 
-    &.italic {
+    &.syntax--italic {
       color: @purple;
       font-style: italic;
     }
   }
 
-  &.section.embedded {
+  &.syntax--section.syntax--embedded {
     color: @syntax-text-color-dark; //PHP open + closing
   }
 
 }
 
-.support {
-  &.class {
+.syntax--support {
+  &.syntax--class {
     color: @yellow;
   }
 
-  &.function  {
+  &.syntax--function  {
     color: @syntax-text-color-dark;
 
-    &.any-method {
+    &.syntax--any-method {
       color: @blue;
     }
   }
 }
 
-.entity {
-  &.name.function { // C# Function names
+.syntax--entity {
+  &.syntax--name.syntax--function { // C# Function names
     color: @color-ten;
     background-color: rgba(0, 0, 0, 0.05);
   }
-  &.name.type {
+  &.syntax--name.syntax--type {
     color: @color-eleven; // C# Class name
-    // background-color: rgba(0, 0, 0, 0.1);
-    // text-decoration: underline; // C# Class name
   }
 
-  &.other.inherited-class {
+  &.syntax--other.syntax--inherited-class {
     color: @syntax-text-color-dark;
   }
-  &.name.class, &.name.type.class {
+  &.syntax--name.syntax--class, &.syntax--name.syntax--type.syntax--class {
     color: @color-eleven; // C# Class name (overrides above)
   }
 
-  &.name.section {
+  &.syntax--name.syntax--section {
     color: @blue;
   }
 
-  &.name.tag { // HTML Tags
+  &.syntax--name.syntax--tag { // HTML Tags
     color: @color-six;
     background-color: rgba(0, 0, 0, 0.05);
   }
 
-  &.other.attribute-name {
+  &.syntax--other.syntax--attribute-name {
     color: @color-eight; //HTML "href"/"name"/"charset" etc
     // background-color: black;
 
-    &.id {
+    &.syntax--id {
       color: @color-twelve; // CSS IDs
     }
   }
 }
 
-.meta {
-  &.class {
+.syntax--meta {
+  &.syntax--class {
     color: @syntax-text-color; // Essentially all C# text
   }
 
-  &.link {
+  &.syntax--link {
     color: @orange;
   }
 
-  &.require {
+  &.syntax--require {
     color: @blue;
   }
 
-  &.selector {
+  &.syntax--selector {
     color: @purple; //?
   }
 
-  &.separator {
+  &.syntax--separator {
     background-color: @gray;
     color: @syntax-text-color-dark; //?
   }
 }
 
-.none {
+.syntax--none {
   color: @syntax-text-color-dark; //?
 }
 
-.markup {
-  &.bold {
+.syntax--markup {
+  &.syntax--bold {
     color: @orange;
     font-weight: bold;
   }
 
-  &.changed {
+  &.syntax--changed {
     color: @syntax-text-color-dark;
   }
 
-  &.deleted {
+  &.syntax--deleted {
     color: @syntax-text-color-dark;
   }
 
-  &.italic {
+  &.syntax--italic {
     color: @syntax-text-color-dark;
     font-style: italic;
   }
 
-  &.heading .punctuation.definition.heading {
+  &.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading {
     color: @blue;
   }
 
-  &.inserted {
+  &.syntax--inserted {
     color: @syntax-text-color-dark;
   }
 
-  &.list {
+  &.syntax--list {
     color: @purple;
   }
 
-  &.quote {
+  &.syntax--quote {
     color: @orange;
   }
 
-  &.raw.inline {
+  &.syntax--raw.syntax--inline {
     color: @syntax-text-color-dark;
   }
 }
 
-.source.gfm .markup {
+.syntax--source.syntax--gfm .syntax--markup {
   -webkit-font-smoothing: auto;
-  &.heading {
+  &.syntax--heading {
     color: @syntax-text-color-dark;
   }
 }
 
 // MINIMAP COLORING
 
-atom-text-editor[mini] .scroll-view,
-:host([mini]) .scroll-view {
+atom-text-editor[mini] .scroll-view {
   padding-left: 1px;
 }
 
-atom-text-editor atom-text-editor-minimap::shadow .minimap-visible-area::after,
-atom-text-editor::shadow atom-text-editor-minimap::shadow .minimap-visible-area::after {
+atom-text-editor atom-text-editor-minimap .minimap-visible-area::after {
   background-color: rgba(0 , 0, 0, 0.1);
 }
 
@@ -328,7 +319,7 @@ atom-text-editor::shadow atom-text-editor-minimap::shadow .minimap-visible-area:
     background-color: rgba(0, 0, 0, 0.0);
 }
 
-atom-text-editor::shadow  .bracket-matcher .region {
+atom-text-editor  .bracket-matcher .region {
     border-bottom: none;
     background-color: @color-thirteen;
 }
